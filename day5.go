@@ -52,7 +52,7 @@ func day5() {
 
 	total := 0
 	for _, update := range updates {
-		if checkUpdate(update, compressedRules) {
+		if (recoverUpdate(update, compressedRules)) {
 			total += update[len(update) / 2]
 		}
 	}
@@ -60,19 +60,37 @@ func day5() {
 	println(total)
 }
 
-func checkUpdate(update []int, compressedRules map[int][]int) bool {
+func recoverUpdate(update []int, compressedRules map[int][]int) bool{
+	recovered := false
 	for numIdx, num := range update {
+		outer:
+
 		if numsAfter, ok := compressedRules[num]; ok {
 			for idxToCheck := numIdx - 1; idxToCheck >= 0; idxToCheck-- {
 				for _, numAfter := range numsAfter {
 					if update[idxToCheck] == numAfter {
-						return false
+						temp := update[idxToCheck]
+						update[idxToCheck] = update[numIdx]
+						update[numIdx] = temp
+
+						recovered = true
+						numIdx = idxToCheck
+
+						goto outer
 					}
 				}
-			}	
+			}
 		}
 
 	}
 
-	return true
+	if recovered {
+		for _, num := range update {
+			print(num)
+			print(" ")
+		}
+		println()
+	}
+
+	return recovered
 }
