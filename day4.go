@@ -20,10 +20,9 @@ func resetFoundLetters() {
 }
 
 func day4() {
-	lines := readLines("input4.txt")
 	letters := [][]rune{}
 
-	for lineIdx, line := range lines {
+	for lineIdx, line := range readLines("input4.txt") {
 		letters = append(letters, []rune{})
 		foundLetters = append(foundLetters, []rune{})
 

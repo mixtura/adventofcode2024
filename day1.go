@@ -8,11 +8,10 @@ import (
 )
 
 func day1() {
-	lines := readLines("input1.txt")
 	leftUniqueList := map[int]bool{}
 	rightCountsList := map[int]int{}
 
-	for _, line := range lines {
+	for _, line := range readLines("input1.txt") {
 		num1Raw, num2Raw, ok := strings.Cut(line, "   ")
 
 		if !ok {

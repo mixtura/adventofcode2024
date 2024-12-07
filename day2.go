@@ -7,10 +7,9 @@ import (
 )
 
 func day2() {
-	lines := readLines("input2.txt")
 	reports := [][]int{}
 
-	for _, line := range lines {
+	for _, line := range readLines("input2.txt") {
 		if len(line) == 0 {
 			continue
 		}
@@ -30,8 +29,6 @@ func day2() {
 
 		reports = append(reports, report)
 	}
-
-	println(len(reports))
 
 	safeReportsCount := 0
 
