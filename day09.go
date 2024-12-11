@@ -6,7 +6,7 @@ import (
 )
 
 func day9() {
-	file, err := os.ReadFile("input9.txt")
+	file, err := os.ReadFile("input09.txt")
 
 	if err != nil {
 		panic(err)
@@ -19,8 +19,6 @@ func day9() {
 		blocksCount := int(rune - '0')
 		compactDiscMap = append(compactDiscMap, blocksCount)
 	}
-
-	println(len(compactDiscMap))
 
 	for fileIdx := len(compactDiscMap) - 1; fileIdx >= 0; fileIdx -= 2 {
 		fileBlocksCount := compactDiscMap[fileIdx]

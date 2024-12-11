@@ -12,10 +12,7 @@ func day10() {
 		for _, rune := range line {
 			num := int(rune - '0')
 			puzzleMap[lineIdx] = append(puzzleMap[lineIdx], num)
-
-			print(num)
 		}
-		println()
 	}
 
 	totalScore := 0

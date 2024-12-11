@@ -20,7 +20,7 @@ func day6() {
 	guardPosY := 0
 	guardDirIdx := 0
 
-	for lineIdx, line := range readLines("input6.txt") {
+	for lineIdx, line := range readLines("input06.txt") {
 		puzzleMap = append(puzzleMap, []rune{})
 		puzzlePath = append(puzzlePath, []int{})
 		for runeIdx, rune := range line {

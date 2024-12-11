@@ -15,7 +15,7 @@ func day8() {
 	antennas := map[rune][]Pos{}
 	antinodes := []Pos{}
 
-	for y, line := range readLines("input8.txt") {
+	for y, line := range readLines("input08.txt") {
 		puzzleMap = append(puzzleMap, []rune{})
 
 		for x, rune := range line {

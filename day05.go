@@ -7,7 +7,7 @@ import (
 )
 
 func day5() {
-	file, err := os.ReadFile("input5.txt")
+	file, err := os.ReadFile("input05.txt")
 	if err != nil {
 		panic(err)
 	}

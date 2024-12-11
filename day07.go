@@ -7,7 +7,7 @@ import (
 )
 
 func day7() {
-	lines := readLines("input7.txt")
+	lines := readLines("input07.txt")
 	total := 0
 
 	for _, line := range lines {

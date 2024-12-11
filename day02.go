@@ -9,7 +9,7 @@ import (
 func day2() {
 	reports := [][]int{}
 
-	for _, line := range readLines("input2.txt") {
+	for _, line := range readLines("input02.txt") {
 		if len(line) == 0 {
 			continue
 		}
