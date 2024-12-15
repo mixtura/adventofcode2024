@@ -1,8 +1,6 @@
 package main
 
 import (
-	"os"
-	"os/exec"
 	"strings"
 	"time"
 )
@@ -248,8 +246,3 @@ func day6() {
 // 	println(obstaclesCount)
 // }
 
-func clearConsole() {
-	cmd := exec.Command("clear") // Command to clear the terminal
-	cmd.Stdout = os.Stdout
-	cmd.Run()
-}
